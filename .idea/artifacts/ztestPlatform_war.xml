@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ztestPlatform:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="houji0.1-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ztestPlatform:war exploded" />
+    </root>
+  </artifact>
+</component>
