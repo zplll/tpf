@@ -3,13 +3,11 @@ package tpf.pojo;
 import java.util.Date;
 
 public class UsersPO {
-    private Integer userId;
+    private Long userId;
 
     private String name;
 
     private String passwd;
-
-    private String emailAddress;
 
     private String roleId;
 
@@ -17,11 +15,11 @@ public class UsersPO {
 
     private Date updateTime;
 
-    public Integer getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -39,14 +37,6 @@ public class UsersPO {
 
     public void setPasswd(String passwd) {
         this.passwd = passwd == null ? null : passwd.trim();
-    }
-
-    public String getEmailAddress() {
-        return emailAddress;
-    }
-
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress == null ? null : emailAddress.trim();
     }
 
     public String getRoleId() {

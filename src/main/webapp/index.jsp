@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: ziponlll
-  Date: 2017/6/12
-  Time: 下午11:48
+  User: zipon
+  Date: 2017/7/17
+  Time: 21:47
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,141 +13,185 @@
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="resources/js/app.js"></script>
-    <title>首页</title>
+    <title>test platform</title>
 </head>
 <body>
-<div class="container" style="width: 100%;" ng-app = "myapp" ng-controller = "taskctrl"><!--style="background-color: rgb(174,221,129)"-->
-    <%@include file="userInfo.jsp"%>
+<div class="container">
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <a href="#">首页</a>
-                </li>
-                <li>
-                    <a href="#">我的工作台</a>
-                </li>
-                <li>
-                    <a href="#">个人信息</a>
-                </li>
-
-                <!--
-                <li class="dropdown pull-right">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">下拉<strong class="caret"></strong></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#">操作</a>
-                        </li>
-                        <li>
-                            <a href="#">设置栏目</a>
-                        </li>
-                        <li>
-                            <a href="#">更多设置</a>
-                        </li>
-                        <li class="divider">
-                        </li>
-                        <li>
-                            <a href="#">分割线</a>
-                        </li>
-                    </ul>
-                </li>
-                -->
-            </ul>
-            <div class="row clearfix">
-                <div class="col-md-12 column">
-                    <button name="insert_task" class="btn btn-primary"  href="#modal-container-504490" data-toggle="modal" ng-click="taskDetail=null">新增任务</button>
-                    <table class="table" > <!--ng-app = "myapp" ng-controller = "taskctrl"-->
-                        <thead>
-                            <tr>
-                                <!--<td>ID</td>-->
-                                <td  ng-repeat = "column in columns">{{columnsToString[column]}}</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat = "task in tasks">
-                                <!--<td>{{$index+1}}</td>-->
-                                <td ng-repeat="column in $parent.columns">{{task[column]}}</td>
-                                <td style="margin: auto auto">
-                                    <button name="edit_task" class="btn btn-primary" value="{{task}}" href="#modal-container-504489" data-toggle="modal" ng-click="editTask($event)">编辑</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!--<a id="modal-504489" href="#modal-container-504489" role="button" class="btn" data-toggle="modal">触发遮罩窗体</a>-->
-
-            <div class="modal fade" id="modal-container-504489" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h4 class="modal-title" id="myModalLabel">
-                                编辑任务
-                            </h4>
-                        </div>
-                        <div class="modal-body" >
-                            <div ng-repeat="column in columns">
-                                <label>{{columnsToString[column]}}:</label>
-                                <input type="text" ng-model="taskDetail[column]">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="button" class="btn btn-primary" ng-click="updateTask()" data-dismiss="modal">保存</button>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- 新增任务  -->
-            <div class="modal fade" id="modal-container-504490" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h4 class="modal-title" id="myModalLabel01">
-                                新增任务
-                            </h4>
-                        </div>
-                        <div class="modal-body" >
-                            <div ng-repeat="column in columns">
-                                <label>{{columnsToString[column]}}:</label>
-                                <input type="text" ng-model="taskDetail[column]">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="button" class="btn btn-primary" ng-click="insertTask()" data-dismiss="modal">保存</button>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-            <nav class="navbar navbar-default navbar-fixed-bottom">
-                <div class="navbar-inner navbar-content-center">
-                    <p class="text-muted credit" style="padding: 10px;">
-                        页脚哈!
-                    </p>
-                </div>
-            </nav>
-
+            <%@include file="userInfo.jsp"%>
         </div>
-
     </div>
-
+    <div class="row clearfix">
+        <div class="col-md-2 column">
+            <div class="panel-group" id="panel-377528">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a class="panel-title" data-toggle="collapse" data-parent="#panel-377528" href="#panel-element-2399">环境配置</a>
+                    </div>
+                    <div id="panel-element-2399" class="panel-collapse in">
+                        <div class="panel-body">
+                            主机配置
+                        </div>
+                        <div class="panel-body">
+                            数据库配置
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-377528" href="#panel-element-94624">接口管理</a>
+                    </div>
+                    <div id="panel-element-94624" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            接口管理
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-377528" href="#panel-element-94625">用例管理</a>
+                    </div>
+                    <div id="panel-element-94625" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            测试用例
+                        </div>
+                        <div class="panel-body">
+                            自定义用例
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-377528" href="#panel-element-94626">执行结果</a>
+                    </div>
+                    <div id="panel-element-94626" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            执行结果查看
+                        </div>
+                    </div>
+                </div>
+            </div> <address> <strong>QQ, Inc.</strong><br/>1418641603<br/><abbr title="Phone">Phone:</abbr> 086-剩下的你猜</address>
+        </div>
+        <div class="col-md-10 column">
+            <div id="caseList">
+            <button type="button" class="btn btn-default btn-primary">新增用例</button>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                        测试编号
+                    </th>
+                    <th>
+                        用例名称
+                    </th>
+                    <th>
+                        执行时间
+                    </th>
+                    <th>
+                        执行结果
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        TB - Monthly
+                    </td>
+                    <td>
+                        01/04/2012
+                    </td>
+                    <td>
+                        Default
+                    </td>
+                </tr>
+                <tr class="success">
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        TB - Monthly
+                    </td>
+                    <td>
+                        01/04/2012
+                    </td>
+                    <td>
+                        Approved
+                    </td>
+                </tr>
+                <tr class="error">
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        TB - Monthly
+                    </td>
+                    <td>
+                        02/04/2012
+                    </td>
+                    <td>
+                        Declined
+                    </td>
+                </tr>
+                <tr class="warning">
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        TB - Monthly
+                    </td>
+                    <td>
+                        03/04/2012
+                    </td>
+                    <td>
+                        Pending
+                    </td>
+                </tr>
+                <tr class="info">
+                    <td>
+                        4
+                    </td>
+                    <td>
+                        TB - Monthly
+                    </td>
+                    <td>
+                        04/04/2012
+                    </td>
+                    <td>
+                        Call in to confirm
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <ul class="pagination" style="margin-right: 20px">
+                <li>
+                    <a href="#">上一页</a>
+                </li>
+                <li>
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+                <li>
+                    <a href="#">下一页</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
 </div>
-<!--
-<script>
-    function editTask(i) {
-        console.log(i);
-        var taskDetail = i;
-        console.log(i);
-
-        $("#editTaskModal").html(i);
-
-    }
-</script>-->
 </body>
 </html>

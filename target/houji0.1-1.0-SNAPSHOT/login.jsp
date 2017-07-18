@@ -21,7 +21,7 @@
         </div>
         <div class="col-md-4 column" ng-controller = "login">
             <div class="row clearfix">
-                <div class="col-md-12 column"  style="text-align: center">
+                <div class="col-md-12 column"  style="text-align: center;overflow:hidden">
                     <img src="resources/image/houji.png">
                 </div>
             </div>
