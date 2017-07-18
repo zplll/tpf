@@ -76,7 +76,7 @@
         <div class="col-md-10 column">
             <div id="caseList">
             <button type="button" class="btn btn-default btn-primary">新增用例</button>
-            <table class="table">
+            <table class="table table-bordered">
                 <thead>
                 <tr>
                     <th>
