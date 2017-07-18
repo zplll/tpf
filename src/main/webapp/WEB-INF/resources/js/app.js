@@ -3,7 +3,6 @@
  */
 var app = angular.module("myapp",[]);
 
-
 app.controller('login', function($scope,$http){
 
     $scope.formData={};

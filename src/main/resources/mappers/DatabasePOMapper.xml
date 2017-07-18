@@ -1,29 +1,29 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="tpf.dao.DatabasePOMapper" >
-  <resultMap id="BaseResultMap" type="tpf.pojo.DatabasePO" >
-    <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="db_name" property="dbName" jdbcType="VARCHAR" />
-    <result column="db_ip" property="dbIp" jdbcType="VARCHAR" />
-    <result column="db_port" property="dbPort" jdbcType="VARCHAR" />
-    <result column="description" property="description" jdbcType="VARCHAR" />
-    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tpf.dao.DatabasePOMapper">
+  <resultMap id="BaseResultMap" type="tpf.pojo.DatabasePO">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="db_name" jdbcType="VARCHAR" property="dbName" />
+    <result column="db_ip" jdbcType="VARCHAR" property="dbIp" />
+    <result column="db_port" jdbcType="VARCHAR" property="dbPort" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
-  <sql id="Base_Column_List" >
+  <sql id="Base_Column_List">
     id, db_name, db_ip, db_port, description, create_time, update_time
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from databases
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from databases
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="tpf.pojo.DatabasePO" >
+  <insert id="insert" parameterType="tpf.pojo.DatabasePO">
     insert into databases (id, db_name, db_ip, 
       db_port, description, create_time, 
       update_time)
@@ -31,80 +31,193 @@
       #{dbPort,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="tpf.pojo.DatabasePO" >
+  <insert id="insertSelective" parameterType="tpf.pojo.DatabasePO">
     insert into databases
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         id,
       </if>
-      <if test="dbName != null" >
+      <if test="dbName != null">
         db_name,
       </if>
-      <if test="dbIp != null" >
+      <if test="dbIp != null">
         db_ip,
       </if>
-      <if test="dbPort != null" >
+      <if test="dbPort != null">
         db_port,
       </if>
-      <if test="description != null" >
+      <if test="description != null">
         description,
       </if>
-      <if test="createTime != null" >
+      <if test="createTime != null">
         create_time,
       </if>
-      <if test="updateTime != null" >
+      <if test="updateTime != null">
         update_time,
       </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         #{id,jdbcType=BIGINT},
       </if>
-      <if test="dbName != null" >
+      <if test="dbName != null">
         #{dbName,jdbcType=VARCHAR},
       </if>
-      <if test="dbIp != null" >
+      <if test="dbIp != null">
         #{dbIp,jdbcType=VARCHAR},
       </if>
-      <if test="dbPort != null" >
+      <if test="dbPort != null">
         #{dbPort,jdbcType=VARCHAR},
       </if>
-      <if test="description != null" >
+      <if test="description != null">
         #{description,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null" >
+      <if test="createTime != null">
         #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="updateTime != null" >
+      <if test="updateTime != null">
         #{updateTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="tpf.pojo.DatabasePO" >
+  <update id="updateByPrimaryKeySelective" parameterType="tpf.pojo.DatabasePO">
     update databases
-    <set >
-      <if test="dbName != null" >
+    <set>
+      <if test="dbName != null">
         db_name = #{dbName,jdbcType=VARCHAR},
       </if>
-      <if test="dbIp != null" >
+      <if test="dbIp != null">
         db_ip = #{dbIp,jdbcType=VARCHAR},
       </if>
-      <if test="dbPort != null" >
+      <if test="dbPort != null">
         db_port = #{dbPort,jdbcType=VARCHAR},
       </if>
-      <if test="description != null" >
+      <if test="description != null">
         description = #{description,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null" >
+      <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="updateTime != null" >
+      <if test="updateTime != null">
         update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="tpf.pojo.DatabasePO" >
+  <update id="updateByPrimaryKey" parameterType="tpf.pojo.DatabasePO">
+    update databases
+    set db_name = #{dbName,jdbcType=VARCHAR},
+      db_ip = #{dbIp,jdbcType=VARCHAR},
+      db_port = #{dbPort,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="tpf.pojo.DatabasePO">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="db_name" jdbcType="VARCHAR" property="dbName" />
+    <result column="db_ip" jdbcType="VARCHAR" property="dbIp" />
+    <result column="db_port" jdbcType="VARCHAR" property="dbPort" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, db_name, db_ip, db_port, description, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from databases
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from databases
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="tpf.pojo.DatabasePO">
+    insert into databases (id, db_name, db_ip, 
+      db_port, description, create_time, 
+      update_time)
+    values (#{id,jdbcType=BIGINT}, #{dbName,jdbcType=VARCHAR}, #{dbIp,jdbcType=VARCHAR}, 
+      #{dbPort,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="tpf.pojo.DatabasePO">
+    insert into databases
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="dbName != null">
+        db_name,
+      </if>
+      <if test="dbIp != null">
+        db_ip,
+      </if>
+      <if test="dbPort != null">
+        db_port,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="dbName != null">
+        #{dbName,jdbcType=VARCHAR},
+      </if>
+      <if test="dbIp != null">
+        #{dbIp,jdbcType=VARCHAR},
+      </if>
+      <if test="dbPort != null">
+        #{dbPort,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="tpf.pojo.DatabasePO">
+    update databases
+    <set>
+      <if test="dbName != null">
+        db_name = #{dbName,jdbcType=VARCHAR},
+      </if>
+      <if test="dbIp != null">
+        db_ip = #{dbIp,jdbcType=VARCHAR},
+      </if>
+      <if test="dbPort != null">
+        db_port = #{dbPort,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="tpf.pojo.DatabasePO">
     update databases
     set db_name = #{dbName,jdbcType=VARCHAR},
       db_ip = #{dbIp,jdbcType=VARCHAR},

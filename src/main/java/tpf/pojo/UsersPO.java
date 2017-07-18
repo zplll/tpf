@@ -9,6 +9,8 @@ public class UsersPO {
 
     private String passwd;
 
+    private String emailAddress;
+
     private String roleId;
 
     private Date createTime;
@@ -37,6 +39,14 @@ public class UsersPO {
 
     public void setPasswd(String passwd) {
         this.passwd = passwd == null ? null : passwd.trim();
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress == null ? null : emailAddress.trim();
     }
 
     public String getRoleId() {

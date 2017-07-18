@@ -31,10 +31,10 @@
                     </div>
                     <div id="panel-element-2399" class="panel-collapse in">
                         <div class="panel-body">
-                            主机配置
+                            <a href="/users">主机配置</a>
                         </div>
                         <div class="panel-body">
-                            数据库配置
+                            <a href="/users/123">数据库配置</a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                 </div>
             </div> <address> <strong>QQ, Inc.</strong><br/>1418641603<br/><abbr title="Phone">Phone:</abbr> 086-剩下的你猜</address>
         </div>
-        <div class="col-md-10 column">
+        <div class="col-md-10 column" id="inner">
             <div id="caseList">
             <button type="button" class="btn btn-default btn-primary">新增用例</button>
             <table class="table table-bordered">
