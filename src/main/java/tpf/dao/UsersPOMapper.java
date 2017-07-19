@@ -3,13 +3,13 @@ package tpf.dao;
 import tpf.pojo.UsersPO;
 
 public interface UsersPOMapper {
-    int deleteByPrimaryKey(Long userId);
+    int deleteByPrimaryKey(Integer userId);
 
     int insert(UsersPO record);
 
     int insertSelective(UsersPO record);
 
-    UsersPO selectByPrimaryKey(Long userId);
+    UsersPO selectByPrimaryKey(Integer userId);
 
     int updateByPrimaryKeySelective(UsersPO record);
 

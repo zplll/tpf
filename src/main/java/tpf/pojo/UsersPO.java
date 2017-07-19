@@ -3,7 +3,7 @@ package tpf.pojo;
 import java.util.Date;
 
 public class UsersPO {
-    private Long userId;
+    private Integer userId;
 
     private String name;
 
@@ -13,15 +13,15 @@ public class UsersPO {
 
     private String roleId;
 
-    private Date createTime;
+    private String createTime;
 
-    private Date updateTime;
+    private String updateTime;
 
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -57,19 +57,40 @@ public class UsersPO {
         this.roleId = roleId == null ? null : roleId.trim();
     }
 
-    public Date getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
 
-    public Date getUpdateTime() {
+    public String getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("{");
+        sb.append("\"userId\":")
+                .append(userId);
+        sb.append(",\"name\":\"")
+                .append(name).append('\"');
+        sb.append(",\"passwd\":\"")
+                .append(passwd).append('\"');
+        sb.append(",\"emailAddress\":\"")
+                .append(emailAddress).append('\"');
+        sb.append(",\"roleId\":\"")
+                .append(roleId).append('\"');
+        sb.append(",\"createTime\":\"")
+                .append(createTime).append('\"');
+        sb.append(",\"updateTime\":\"")
+                .append(updateTime).append('\"');
+        sb.append('}');
+        return sb.toString();
     }
 }

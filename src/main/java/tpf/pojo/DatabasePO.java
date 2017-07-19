@@ -3,7 +3,7 @@ package tpf.pojo;
 import java.util.Date;
 
 public class DatabasePO {
-    private Long id;
+    private Integer id;
 
     private String dbName;
 
@@ -13,15 +13,15 @@ public class DatabasePO {
 
     private String description;
 
-    private Date createTime;
+    private String createTime;
 
-    private Date updateTime;
+    private String updateTime;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -57,19 +57,40 @@ public class DatabasePO {
         this.description = description == null ? null : description.trim();
     }
 
-    public Date getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
 
-    public Date getUpdateTime() {
+    public String getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("{");
+        sb.append("\"id\":")
+                .append(id);
+        sb.append(",\"dbName\":\"")
+                .append(dbName).append('\"');
+        sb.append(",\"dbIp\":\"")
+                .append(dbIp).append('\"');
+        sb.append(",\"dbPort\":\"")
+                .append(dbPort).append('\"');
+        sb.append(",\"description\":\"")
+                .append(description).append('\"');
+        sb.append(",\"createTime\":\"")
+                .append(createTime).append('\"');
+        sb.append(",\"updateTime\":\"")
+                .append(updateTime).append('\"');
+        sb.append('}');
+        return sb.toString();
     }
 }

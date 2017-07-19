@@ -3,7 +3,6 @@
  */
 var app = angular.module("myapp",[]);
 
-
 app.controller('login', function($scope,$http){
 
     $scope.formData={};
@@ -34,38 +33,27 @@ app.controller('login', function($scope,$http){
 })
 
 //根据登陆者查询任务
-app.controller('taskctrl',function ($scope,$http) {
-    $scope.tasks= null;
+app.controller('hostsctrl',function ($scope,$http) {
+    $scope.hosts= null;
     $scope.columnsToString={
-        "taskId":"项目ID",
-        "title":"项目标题",
+        "id":"ID",
+        "hostName":"环境名称",
+        "hostIp":"环境地址",
+        "hostPort":"端口",
+        "description":"备注",
         "createTime":"创建时间",
-        "leader":"项目负责人",
-        "detail":"备注",
-        "status":"项目状态",
-        "codingLeader":"coding负责人",
-        "codingPrice":"coding价格",
-        "dataEntryLeader":"录入负责人",
-        "dataEntryPrice":"录入价格",
-        "dataCheckPrice":"查错价格",
-        "epiDataPrice":"EPI价格",
-        "outputPrice":"出表价格",
-        "bvcPrice":"BVC价格",
-        "price":"总价格",
-        "customer":"对接客户",
-        "bonus":"项目提成",
-
-    }
+        "updateTime":"更新时间"
+    };
     $scope.columns = null;
     $http({
-        method  : 'POST',
-        url     : '/task/selectbyleader',
+        method  : 'GET',
+        url     : '/hosts',
         data    : '',  // pass in data as strings
-        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+        //headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
     })
         .success(function(data){
             $scope.columns = data.columns;
-            $scope.tasks = data.details;
+            $scope.hosts = data.details;
         });
     $scope.taskDetail = "1234";
     $scope.editTask=function($event){

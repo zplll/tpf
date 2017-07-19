@@ -1,9 +1,14 @@
 package tpf.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.servlet.http.HttpSession;
 import java.util.Date;
 
 public class HostPO {
-    private Long id;
+
+    private Integer id;
 
     private String hostName;
 
@@ -13,15 +18,15 @@ public class HostPO {
 
     private String description;
 
-    private Date createTime;
+    private String createTime;
 
-    private Date updateTime;
+    private String updateTime;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -57,19 +62,40 @@ public class HostPO {
         this.description = description == null ? null : description.trim();
     }
 
-    public Date getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
 
-    public Date getUpdateTime() {
+    public String getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("{");
+        sb.append("\"id\":")
+                .append(id);
+        sb.append(",\"hostName\":\"")
+                .append(hostName).append('\"');
+        sb.append(",\"hostIp\":\"")
+                .append(hostIp).append('\"');
+        sb.append(",\"hostPort\":\"")
+                .append(hostPort).append('\"');
+        sb.append(",\"description\":\"")
+                .append(description).append('\"');
+        sb.append(",\"createTime\":\"")
+                .append(createTime).append('\"');
+        sb.append(",\"updateTime\":\"")
+                .append(updateTime).append('\"');
+        sb.append('}');
+        return sb.toString();
     }
 }

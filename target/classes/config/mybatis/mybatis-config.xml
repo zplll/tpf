@@ -23,5 +23,7 @@
     <mappers>
         <!--<mapper resource="com/yu/res/UserMapper.xml" />  -->
         <mapper resource="mappers/UserMapper.xml" />
+        <mapper resource="mappers/HostPOMapper.xml" />
+        <!--<mapper resource="mappers/**/*.xml" />-->
     </mappers>
 </configuration>
