@@ -55,80 +55,81 @@ app.controller('hostsctrl',function ($scope,$http) {
             $scope.columns = data.columns;
             $scope.hosts = data.details;
         });
-    $scope.taskDetail = "1234";
-    $scope.editTask=function($event){
-        $scope.taskDetail = JSON.parse($event.target.getAttribute("value"));
-        //debug
-        console.log($scope.taskDetail.bonus);
-        //$("#editTaskModal").html(taskDetail);
 
-    };
-    $scope.updateTask=function () {
-        $scope.taskDetail.taskId=parseInt($scope.taskDetail.taskId);
-        $scope.taskDetail.codingPrice=parseInt($scope.taskDetail.codingPrice);
-        $scope.taskDetail.dataEntryPrice=parseInt($scope.taskDetail.dataEntryPrice);
-        $scope.taskDetail.dataCheckPrice=parseInt($scope.taskDetail.dataCheckPrice);
-        $scope.taskDetail.epiDataPrice=parseInt($scope.taskDetail.epiDataPrice);
-        $scope.taskDetail.outputPrice=parseInt($scope.taskDetail.outputPrice);
-        $scope.taskDetail.bvcPrice=parseInt($scope.taskDetail.bvcPrice);
-        $scope.taskDetail.price=parseInt($scope.taskDetail.price);
-        $scope.taskDetail.bonus=parseInt($scope.taskDetail.bonus);
-        $http({
-            method  : 'POST',
-            url     : '/task/updatetask',
-            data    : $scope.taskDetail,  // pass in data as strings
-            headers : { 'Content-Type': 'application/json;charset=utf-8' }
-        })
-            .success(function(data){
-                console.log(data.message);
-                if(data.message=="success") {
-                    $http({
-                        method: 'POST',
-                        url: '/task/selectbyleader',
-                        data: '',  // pass in data as strings
-                        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-                    })
-                        .success(function (data) {
-                            $scope.columns = data.columns;
-                            $scope.tasks = data.details;
-                        });
-                }
-            });
-
-
-    }
-
-    $scope.insertTask=function () {
-        $scope.taskDetail.taskId=parseInt($scope.taskDetail.taskId);
-        $scope.taskDetail.codingPrice=parseInt($scope.taskDetail.codingPrice);
-        $scope.taskDetail.dataEntryPrice=parseInt($scope.taskDetail.dataEntryPrice);
-        $scope.taskDetail.dataCheckPrice=parseInt($scope.taskDetail.dataCheckPrice);
-        $scope.taskDetail.epiDataPrice=parseInt($scope.taskDetail.epiDataPrice);
-        $scope.taskDetail.outputPrice=parseInt($scope.taskDetail.outputPrice);
-        $scope.taskDetail.bvcPrice=parseInt($scope.taskDetail.bvcPrice);
-        $scope.taskDetail.price=parseInt($scope.taskDetail.price);
-        $scope.taskDetail.bonus=parseInt($scope.taskDetail.bonus);
-        $http({
-            method  : 'POST',
-            url     : '/task/inserttask',
-            data    : $scope.taskDetail,  // pass in data as strings
-            headers : { 'Content-Type': 'application/json;charset=utf-8' }
-        })
-            .success(function(data){
-                console.log(data.message);
-                if(data.message=="success") {
-                    $http({
-                        method: 'POST',
-                        url: '/task/selectbyleader',
-                        data: '',  // pass in data as strings
-                        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-                    })
-                        .success(function (data) {
-                            $scope.columns = data.columns;
-                            $scope.tasks = data.details;
-                        });
-                }
-            });
-    }
+    // $scope.taskDetail = "1234";
+    // $scope.editTask=function($event){
+    //     $scope.taskDetail = JSON.parse($event.target.getAttribute("value"));
+    //     //debug
+    //     console.log($scope.taskDetail.bonus);
+    //     //$("#editTaskModal").html(taskDetail);
+    //
+    // };
+    // $scope.updateTask=function () {
+    //     $scope.taskDetail.taskId=parseInt($scope.taskDetail.taskId);
+    //     $scope.taskDetail.codingPrice=parseInt($scope.taskDetail.codingPrice);
+    //     $scope.taskDetail.dataEntryPrice=parseInt($scope.taskDetail.dataEntryPrice);
+    //     $scope.taskDetail.dataCheckPrice=parseInt($scope.taskDetail.dataCheckPrice);
+    //     $scope.taskDetail.epiDataPrice=parseInt($scope.taskDetail.epiDataPrice);
+    //     $scope.taskDetail.outputPrice=parseInt($scope.taskDetail.outputPrice);
+    //     $scope.taskDetail.bvcPrice=parseInt($scope.taskDetail.bvcPrice);
+    //     $scope.taskDetail.price=parseInt($scope.taskDetail.price);
+    //     $scope.taskDetail.bonus=parseInt($scope.taskDetail.bonus);
+    //     $http({
+    //         method  : 'POST',
+    //         url     : '/task/updatetask',
+    //         data    : $scope.taskDetail,  // pass in data as strings
+    //         headers : { 'Content-Type': 'application/json;charset=utf-8' }
+    //     })
+    //         .success(function(data){
+    //             console.log(data.message);
+    //             if(data.message=="success") {
+    //                 $http({
+    //                     method: 'POST',
+    //                     url: '/task/selectbyleader',
+    //                     data: '',  // pass in data as strings
+    //                     headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    //                 })
+    //                     .success(function (data) {
+    //                         $scope.columns = data.columns;
+    //                         $scope.tasks = data.details;
+    //                     });
+    //             }
+    //         });
+    //
+    //
+    // }
+    //
+    // $scope.insertTask=function () {
+    //     $scope.taskDetail.taskId=parseInt($scope.taskDetail.taskId);
+    //     $scope.taskDetail.codingPrice=parseInt($scope.taskDetail.codingPrice);
+    //     $scope.taskDetail.dataEntryPrice=parseInt($scope.taskDetail.dataEntryPrice);
+    //     $scope.taskDetail.dataCheckPrice=parseInt($scope.taskDetail.dataCheckPrice);
+    //     $scope.taskDetail.epiDataPrice=parseInt($scope.taskDetail.epiDataPrice);
+    //     $scope.taskDetail.outputPrice=parseInt($scope.taskDetail.outputPrice);
+    //     $scope.taskDetail.bvcPrice=parseInt($scope.taskDetail.bvcPrice);
+    //     $scope.taskDetail.price=parseInt($scope.taskDetail.price);
+    //     $scope.taskDetail.bonus=parseInt($scope.taskDetail.bonus);
+    //     $http({
+    //         method  : 'POST',
+    //         url     : '/task/inserttask',
+    //         data    : $scope.taskDetail,  // pass in data as strings
+    //         headers : { 'Content-Type': 'application/json;charset=utf-8' }
+    //     })
+    //         .success(function(data){
+    //             console.log(data.message);
+    //             if(data.message=="success") {
+    //                 $http({
+    //                     method: 'POST',
+    //                     url: '/task/selectbyleader',
+    //                     data: '',  // pass in data as strings
+    //                     headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    //                 })
+    //                     .success(function (data) {
+    //                         $scope.columns = data.columns;
+    //                         $scope.tasks = data.details;
+    //                     });
+    //             }
+    //         });
+    // }
 
 })

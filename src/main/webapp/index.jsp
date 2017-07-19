@@ -14,6 +14,7 @@
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="resources/js/app.js"></script>
     <title>test platform</title>
+
 </head>
 <body>
 <div class="container">
@@ -31,7 +32,8 @@
                     </div>
                     <div id="panel-element-2399" class="panel-collapse in">
                         <div class="panel-body">
-                            <a href="/users">主机配置</a>
+                            <%--<span onclick="javascript:load(this);" href="hosts.jsp">主机配置</span>--%>
+                            <a id="hostsBtn" href="hosts.jsp" target="iframeName">主机配置</a>
                         </div>
                         <div class="panel-body">
                             <a href="/users/123">数据库配置</a>
@@ -74,9 +76,25 @@
             </div> <address> <strong>QQ, Inc.</strong><br/>1418641603<br/><abbr title="Phone">Phone:</abbr> 086-剩下的你猜</address>
         </div>
         <div class="col-md-10 column" id="inner">
-
+            <%--src="hosts.jsp"--%>
+            <iframe id ="innerPage" name="iframeName"   scrolling="no" style="width: 100%;height: 100%;border-width: 0; margin-top: 40px;"></iframe>
         </div>
     </div>
 </div>
+<script>
+//    $("#hostsBtn").click(function () {
+//        $("#inner").load("hosts.jsp");
+//    });
+//    function load(url, data) {
+//        //alert($(url).attr("href"));
+//        $.ajaxSetup({cache: false});
+//        $("#inner").load($(url).attr("href") + " #inner ", data, function (result) {
+//            alert(result);
+//            //将被加载页的JavaScript加载到本页执行
+//            $result = $(result);
+//            $result.find("script").appendTo('#inner');
+//        });
+//    }
+</script>
 </body>
 </html>
