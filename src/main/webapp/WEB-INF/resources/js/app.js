@@ -56,6 +56,41 @@ app.controller('hostsctrl',function ($scope,$http) {
             $scope.hosts = data.details;
         });
 
+    //新增主机配置
+    $scope.addHostInfo = null;
+
+
+    $scope.addHostFunc = function () {
+        console.log($scope.addHostInfo);
+        //没有绑定这些数据，得人工置为null
+         //$scope.addHostInfo.id=parseInt($scope.addHostInfo.id);
+        // $scope.addHostInfo.createTime=null;
+        // $scope.addHostInfo.updateTime=null;
+        $http({
+                    method  : 'POST',
+                    url     : '/addhost',
+                    data    : $scope.addHostInfo,  // pass in data as strings
+                    headers : { 'Content-Type': 'application/json;charset=utf-8' }
+                 }).success(function (data) {
+                if(data.code==1){
+                    //如果成功，重新加载hosts信息
+                    $http({
+                        method  : 'GET',
+                        url     : '/hosts',
+                        data    : '',  // pass in data as strings
+                        //headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+                    })
+                        .success(function(data){
+                            $scope.columns = data.columns;
+                            $scope.hosts = data.details;
+                        })
+
+                }else{
+                    alert(data.message);
+                }
+        })
+
+    }
     // $scope.taskDetail = "1234";
     // $scope.editTask=function($event){
     //     $scope.taskDetail = JSON.parse($event.target.getAttribute("value"));

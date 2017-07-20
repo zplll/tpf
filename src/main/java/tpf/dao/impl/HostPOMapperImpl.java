@@ -40,6 +40,7 @@ public class HostPOMapperImpl implements HostPOMapper {
         try {
             HostPOMapper hostPOMapper = ss.getMapper(HostPOMapper.class);
             result = hostPOMapper.insert(record);
+            ss.commit();
         }catch (Exception e){
             e.printStackTrace();
         }finally {
@@ -54,6 +55,7 @@ public class HostPOMapperImpl implements HostPOMapper {
         try {
             HostPOMapper hostPOMapper = ss.getMapper(HostPOMapper.class);
             result = hostPOMapper.insertSelective(record);
+            ss.commit();
         }catch (Exception e){
             e.printStackTrace();
         }finally {
@@ -85,6 +87,7 @@ public class HostPOMapperImpl implements HostPOMapper {
         try {
             HostPOMapper hostPOMapper = ss.getMapper(HostPOMapper.class);
             result = hostPOMapper.updateByPrimaryKeySelective(record);
+            ss.commit();
         }catch (Exception e){
             e.printStackTrace();
         }finally {
@@ -99,6 +102,7 @@ public class HostPOMapperImpl implements HostPOMapper {
         try {
             HostPOMapper hostPOMapper = ss.getMapper(HostPOMapper.class);
             result = hostPOMapper.updateByPrimaryKey(record);
+            ss.commit();
         }catch (Exception e){
             e.printStackTrace();
         }finally {

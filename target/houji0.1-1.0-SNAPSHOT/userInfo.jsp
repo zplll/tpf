@@ -7,8 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<div>
-    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+<div style="line-height: 50px;background-color:#495060;width: 100%;color: #D3DCE6;">
+    <span class="glyphicon glyphicon-user" style="margin-left: 20px" aria-hidden="true"></span>
 
     <%! String username = null;%>
 

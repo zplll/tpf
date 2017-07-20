@@ -11,6 +11,6 @@
     <title>error</title>
 </head>
 <body style="text-align: center">
-<img src="resources/image/404.png" />
+<img src="/resources/image/404.png" />
 </body>
 </html>

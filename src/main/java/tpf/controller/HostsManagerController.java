@@ -3,10 +3,13 @@ package tpf.controller;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import tpf.dao.impl.HostPOMapperImpl;
 import tpf.pojo.HostPO;
+import tpf.utils.DateUtil;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -20,6 +23,10 @@ public class HostsManagerController {
     @Autowired
     private HostPOMapperImpl hostPOMapper = new HostPOMapperImpl();
 
+    /**
+     * 查询所有主机配置信息
+     * @return
+     */
     @RequestMapping(value = "/hosts",produces = "text/plain;charset=UTF-8")
     @ResponseBody
     public String getAllHosts(){
@@ -43,7 +50,28 @@ public class HostsManagerController {
         result.put("columns",columns);
         result.put("details",details);
         return String.valueOf(result);
+    }
 
+    /**
+     * 创建主机配置
+     * @param hostpo
+     * @return
+     */
+    @RequestMapping(value = "/addhost",produces = "text/plain;charset=UTF-8",method = RequestMethod.POST)
+    @ResponseBody
+    public String addHost(@RequestBody HostPO hostpo){
+        JSONObject result = new JSONObject();
+        hostpo.setCreateTime(DateUtil.getNow());
+        int resultInt =hostPOMapper.insert(hostpo);
+        if (resultInt==1){
+            result.put("code",1);
+            result.put("message","success");
+        }else {
+            result.put("code",0);
+            result.put("message","add host info failed");
+        }
+        System.out.println(hostpo.toString());
+        return String.valueOf(result);
 
     }
 
