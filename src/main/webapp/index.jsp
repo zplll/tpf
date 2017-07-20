@@ -17,14 +17,14 @@
 
 </head>
 <body>
-<div class="container">
+<div class="container" style="width: 90%">
     <div class="row clearfix">
-        <div class="col-md-12 column">
+        <%--<div class="col-md-12 column">--%>
             <%@include file="userInfo.jsp"%>
-        </div>
+        <%--</div>--%>
     </div>
     <div class="row clearfix">
-        <div class="col-md-2 column">
+        <div class="col-md-2 column" style="background-color: #495060;height: 100%">
             <div class="panel-group" id="panel-377528">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -73,11 +73,11 @@
                         </div>
                     </div>
                 </div>
-            </div> <address> <strong>QQ, Inc.</strong><br/>1418641603<br/><abbr title="Phone">Phone:</abbr> 086-剩下的你猜</address>
+            </div> <address style="color: #D3DCE6;"> <strong>QQ, Inc.</strong><br/>1418641603<br/><abbr title="Phone">Phone:</abbr> 086-剩下的你猜</address>
         </div>
-        <div class="col-md-10 column" id="inner">
+        <div class="col-md-10 column" id="inner" style="background-color: gainsboro">
             <%--src="hosts.jsp"--%>
-            <iframe id ="innerPage" name="iframeName"   scrolling="no" style="width: 100%;height: 100%;border-width: 0; margin-top: 40px;"></iframe>
+            <iframe id ="innerPage" name="iframeName"   scrolling="no" style="width: 100%;height: 100%;border-width: 0; margin-top: 20px;"></iframe>
         </div>
     </div>
 </div>

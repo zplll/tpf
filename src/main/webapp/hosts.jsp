@@ -17,15 +17,20 @@
 
 </head>
 <body>
-<div class="container" ng-app="myapp" ng-controller="hostsctrl">
+<div class="container" ng-app="myapp" ng-controller="hostsctrl" style="width: 100%">
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <button name="insert_task" class="btn btn-primary"  href="#modal-container-504490" data-toggle="modal" ng-click="taskDetail=null">新增环境配置</button>
+            <button name="insert_task" class="btn btn-primary"  href="#modal-container-504490" data-toggle="modal" ng-click="taskDetail=null" style="margin-top: 10px">新增环境配置</button>
+            <br/>
+            <br/>
             <table class="table table-bordered">
                 <thead>
                 <tr>
                     <th ng-repeat="column in columns">
                         {{columnsToString[column]}}
+                    </th>
+                    <th>
+                        执行操作
                     </th>
                 </tr>
                 </thead>
@@ -33,6 +38,9 @@
                     <tr ng-repeat="host in hosts">
                         <td ng-repeat="column in columns">
                             {{host[column]}}
+                        </td>
+                        <td >
+                            <button class="btn btn-primary">修改</button> &nbsp;&nbsp;&nbsp;<button class="btn btn-primary">删除</button>
                         </td>
                     </tr>
                 </tbody>

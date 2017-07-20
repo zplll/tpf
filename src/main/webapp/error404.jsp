@@ -10,7 +10,7 @@
 <head>
     <title>error</title>
 </head>
-<body>
-<h1>404</h1>
+<body style="text-align: center">
+<img src="resources/image/404.png" />
 </body>
 </html>
