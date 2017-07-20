@@ -57,11 +57,11 @@ app.controller('hostsctrl',function ($scope,$http) {
         });
 
     //新增主机配置
-    $scope.addHostInfo = null;
+    $scope.addHostInfo ={"createTime":"2017-07-19 17:34:21.0","description":"","hostIp":"","hostName":"","hostPort":"","id":5};
 
 
     $scope.addHostFunc = function () {
-        console.log($scope.addHostInfo);
+        //console.log($scope.addHostInfo);
         //没有绑定这些数据，得人工置为null
          //$scope.addHostInfo.id=parseInt($scope.addHostInfo.id);
         // $scope.addHostInfo.createTime=null;
@@ -91,6 +91,7 @@ app.controller('hostsctrl',function ($scope,$http) {
         })
 
     }
+
     // $scope.taskDetail = "1234";
     // $scope.editTask=function($event){
     //     $scope.taskDetail = JSON.parse($event.target.getAttribute("value"));

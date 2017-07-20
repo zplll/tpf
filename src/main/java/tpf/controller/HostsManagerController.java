@@ -60,8 +60,11 @@ public class HostsManagerController {
     @RequestMapping(value = "/addhost",produces = "text/plain;charset=UTF-8",method = RequestMethod.POST)
     @ResponseBody
     public String addHost(@RequestBody HostPO hostpo){
-        JSONObject result = new JSONObject();
+        hostpo.setId(null);
         hostpo.setCreateTime(DateUtil.getNow());
+
+        JSONObject result = new JSONObject();
+
         int resultInt =hostPOMapper.insert(hostpo);
         if (resultInt==1){
             result.put("code",1);

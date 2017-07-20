@@ -20,7 +20,8 @@
 <div class="container" ng-app="myapp" ng-controller="hostsctrl" style="width: 100%">
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <button name="insert_task" class="btn btn-primary"  href="#addHost" data-toggle="modal" ng-click="addHostInfo=null" style="margin-top: 10px">新增环境配置</button>
+            <%--ng-click初始化ip name port description的值--%>
+            <button name="insert_task" class="btn btn-primary"  href="#addHost" data-toggle="modal" ng-click="addHostInfo.hostIp=null;addHostInfo.hostName=null;addHostInfo.hostPort=null;addHostInfo.description=null;"  style="margin-top: 10px">新增环境配置</button>
             <br/>
             <br/>
             <table class="table table-bordered">
