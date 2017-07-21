@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import tpf.dao.impl.HostPOMapperImpl;
 import tpf.pojo.HostPO;
 import tpf.utils.DateUtil;
+import tpf.utils.ReflectUtil;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -89,6 +90,41 @@ public class HostsManagerController {
             result.put("code",0);
             result.put("message","delete host info failed");
         }
+        return String.valueOf(result);
+
+    }
+
+    //更改host
+    @RequestMapping(value = "/updatehost",produces = "text/plain;charset=UTF-8",method = RequestMethod.POST)
+    @ResponseBody
+    public String updateHost(@RequestBody HostPO hostPo){
+        hostPo.setUpdateTime(DateUtil.getNow());
+        System.out.println(hostPo.toString());
+        JSONObject result = new JSONObject();
+
+        int resultInt =hostPOMapper.updateByPrimaryKey(hostPo);
+        if (resultInt==1){
+            result.put("code",1);
+            result.put("message","update success");
+        }else {
+            result.put("code",0);
+            result.put("message","update host info failed");
+        }
+        return String.valueOf(result);
+
+    }
+
+    //根据id查询host
+    @RequestMapping(value = "/hosts/{hostId}",produces = "text/plain;charset=UTF-8",method = RequestMethod.GET)
+    @ResponseBody
+    public String selectHostById(@PathVariable Integer hostId){
+        JSONObject result = new JSONObject();
+
+        HostPO hostPO =hostPOMapper.selectByPrimaryKey(hostId);
+
+            result.put("columns", ReflectUtil.getPropFromClass("tpf.pojo.HostPO"));
+            result.put("details",hostPO);
+
         return String.valueOf(result);
 
     }

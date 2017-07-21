@@ -41,8 +41,8 @@
                             {{host[column]}}
                         </td>
                         <td >
-                            <button class="btn btn-primary" value="{{host.id}}" >修改</button> &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-primary"value="{{host.id}}" ng-click="deleteBtnFunc($event)" href="#delHost" data-toggle="modal" >删除</button>
+                            <button class="btn btn-primary" value="{{host.id}}" ng-click="editBtnFunc($event)" href="#editHost" data-toggle="modal" >修改</button> &nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-primary" value="{{host.id}}" ng-click="deleteBtnFunc($event)" href="#delHost" data-toggle="modal" >删除</button>
                         </td>
                     </tr>
                 </tbody>
@@ -93,6 +93,32 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">不，我点错了</button> <button type="button" class="btn btn-primary" ng-click="deleteHostFunc()" data-dismiss="modal">确认删除</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <%--修改主机信息div--%>
+    <div class="modal fade" id="editHost" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel03">
+                        修改环境配置
+                    </h4>
+                </div>
+                <div class="modal-body form-horizontal" >
+                    <div ng-repeat="column in columns" class="form-group" ng-if="column != 'createTime' && column != 'updateTime' && column != 'id'">
+                        <label class="col-sm-2 control-label">{{columnsToString[column]}}:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" ng-model="editHostInfo[column]">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">不了，不修改了</button> <button type="button" class="btn btn-primary" ng-click="editHostFunc()" data-dismiss="modal">确认修改</button>
                 </div>
             </div>
 
