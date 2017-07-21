@@ -3,10 +3,7 @@ package tpf.controller;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import tpf.dao.impl.HostPOMapperImpl;
 import tpf.pojo.HostPO;
 import tpf.utils.DateUtil;
@@ -78,4 +75,21 @@ public class HostsManagerController {
 
     }
 
+    //删除host
+    @RequestMapping(value = "/deletehost/{hostId}",produces = "text/plain;charset=UTF-8",method = RequestMethod.DELETE)
+    @ResponseBody
+    public String addHost(@PathVariable Integer hostId){
+        JSONObject result = new JSONObject();
+
+        int resultInt =hostPOMapper.deleteByPrimaryKey(hostId);
+        if (resultInt==1){
+            result.put("code",1);
+            result.put("message","delete success");
+        }else {
+            result.put("code",0);
+            result.put("message","delete host info failed");
+        }
+        return String.valueOf(result);
+
+    }
 }

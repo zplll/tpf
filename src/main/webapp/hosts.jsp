@@ -41,7 +41,8 @@
                             {{host[column]}}
                         </td>
                         <td >
-                            <button class="btn btn-primary">修改</button> &nbsp;&nbsp;&nbsp;<button class="btn btn-primary">删除</button>
+                            <button class="btn btn-primary" value="{{host.id}}" >修改</button> &nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-primary"value="{{host.id}}" ng-click="deleteBtnFunc($event)" href="#delHost" data-toggle="modal" >删除</button>
                         </td>
                     </tr>
                 </tbody>
@@ -51,7 +52,7 @@
 
 
 
-<%--新增主机div--%>
+    <%--新增主机div--%>
     <div class="modal fade" id="addHost" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -75,6 +76,27 @@
         </div>
 
     </div>
+    </div>
+
+    <%--删除主机信息确认div--%>
+    <div class="modal fade" id="delHost" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel02">
+                        确认
+                    </h4>
+                </div>
+                <div class="modal-body form-horizontal" >
+                    <h3>确认删除？</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">不，我点错了</button> <button type="button" class="btn btn-primary" ng-click="deleteHostFunc()" data-dismiss="modal">确认删除</button>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 </body>

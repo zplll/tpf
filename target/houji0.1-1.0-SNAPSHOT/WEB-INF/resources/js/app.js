@@ -32,7 +32,7 @@ app.controller('login', function($scope,$http){
     };
 })
 
-//根据登陆者查询任务
+//主机配置相关的ctrl
 app.controller('hostsctrl',function ($scope,$http) {
     $scope.hosts= null;
     $scope.columnsToString={
@@ -57,11 +57,11 @@ app.controller('hostsctrl',function ($scope,$http) {
         });
 
     //新增主机配置
-    $scope.addHostInfo = null;
+    $scope.addHostInfo ={"createTime":"2017-07-19 17:34:21.0","description":"","hostIp":"","hostName":"","hostPort":"","id":5};
 
 
     $scope.addHostFunc = function () {
-        console.log($scope.addHostInfo);
+        //console.log($scope.addHostInfo);
         //没有绑定这些数据，得人工置为null
          //$scope.addHostInfo.id=parseInt($scope.addHostInfo.id);
         // $scope.addHostInfo.createTime=null;
@@ -90,6 +90,39 @@ app.controller('hostsctrl',function ($scope,$http) {
                 }
         })
 
+    }
+
+
+
+    //即将删除的主机ID
+    $scope.deleteId=null;
+    $scope.deleteBtnFunc = function ($event) {
+        $scope.deleteId=$event.target.getAttribute("value");
+    }
+
+    //发出删除请求
+    $scope.deleteHostFunc=function () {
+        $http({
+            method : "DELETE",
+            url : "/deletehost/"+$scope.deleteId
+        }).success(function (data) {
+            if(data.code==1){
+                //如果成功，重新加载hosts信息
+                $http({
+                    method  : 'GET',
+                    url     : '/hosts',
+                    data    : '',  // pass in data as strings
+                    //headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+                })
+                    .success(function(data){
+                        $scope.columns = data.columns;
+                        $scope.hosts = data.details;
+                    })
+
+            }else{
+                alert(data.message);
+            }
+        })
     }
     // $scope.taskDetail = "1234";
     // $scope.editTask=function($event){

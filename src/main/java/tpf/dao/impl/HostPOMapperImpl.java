@@ -25,6 +25,7 @@ public class HostPOMapperImpl implements HostPOMapper {
         try {
             HostPOMapper hostPOMapper = ss.getMapper(HostPOMapper.class);
             result = hostPOMapper.deleteByPrimaryKey(id);
+            ss.commit();
         }catch (Exception e){
             e.printStackTrace();
         }finally {
