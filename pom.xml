@@ -130,6 +130,11 @@
         <artifactId>junit</artifactId>
         <version>RELEASE</version>
     </dependency>
+    <dependency>
+        <groupId>tk.mybatis</groupId>
+        <artifactId>orderby-helper</artifactId>
+        <version>0.0.2</version>
+    </dependency>
 </dependencies>
     <build>
         <plugins>

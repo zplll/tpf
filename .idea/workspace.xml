@@ -3,14 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="26533706-d0bd-4bb2-878e-c4818b3024d3" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/database.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ztestPlatform.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ztestPlatform_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ztestPlatform_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/app.js" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tpf/controller/HostsManagerController.java" afterPath="$PROJECT_DIR$/src/main/java/tpf/controller/HostsManagerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/database.properties" afterPath="$PROJECT_DIR$/target/classes/database.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/houji0.1-1.0-SNAPSHOT/WEB-INF/classes/database.properties" afterPath="$PROJECT_DIR$/target/houji0.1-1.0-SNAPSHOT/WEB-INF/classes/database.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/houji0.1-1.0-SNAPSHOT/WEB-INF/resources/js/app.js" afterPath="$PROJECT_DIR$/target/houji0.1-1.0-SNAPSHOT/WEB-INF/resources/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/houji0.1-1.0-SNAPSHOT/login.jsp" afterPath="$PROJECT_DIR$/target/houji0.1-1.0-SNAPSHOT/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ztestPlatform.iml" afterPath="$PROJECT_DIR$/ztestPlatform.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +25,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HostsManagerController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HostsManagerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tpf/controller/HostsManagerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="893">
-              <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="28" />
+            <state relative-caret-position="354">
+              <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -37,13 +39,13 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/hosts.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
@@ -78,16 +80,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
               <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -143,11 +135,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my-pagination.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/my-pagination.css">
+      <file leaf-file-name="mybatis-config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="418">
+              <caret line="40" column="70" lean-forward="false" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="136" column="17" lean-forward="false" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -184,12 +186,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/createtableSql/createtablesql.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/config/spring-mybatis.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/test/java/tpf/controller/HostsManagerControllerTest.java" />
         <option value="$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.0.0/pagehelper-5.0.0.jar!/com/github/pagehelper/Page.class" />
         <option value="$PROJECT_DIR$/src/main/java/tpf/pojo/BaseResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/tpf/pojo/PageInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tpf/controller/HostsManagerController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/hosts.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/my-pagination.js" />
         <option value="$PROJECT_DIR$/src/main/resources/database.properties" />
@@ -197,6 +197,9 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/app.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tpf/controller/HostsManagerController.java" />
       </list>
     </option>
   </component>
@@ -807,6 +810,10 @@
               <option name="myItemId" value="tpf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -1366,7 +1373,7 @@
       <workItem from="1500731735459" duration="305000" />
       <workItem from="1500732043421" duration="3204000" />
       <workItem from="1500790104212" duration="12987000" />
-      <workItem from="1500803589156" duration="3202000" />
+      <workItem from="1500803589156" duration="4677000" />
     </task>
     <task id="LOCAL-00001" summary="1.优化整个框架，不用手动创建sqlsession，关闭sqlsession，提交sqlsession。利用spring的SqlSessionFactoryBean.getObject()获得SqlSessionFactory，自动管理SqlSession。 &#10;2.加入控制台打印mybatis日志。在mybatis-config.xml中配置日志信息。 &#10;3.优化登录接口，不使用以前笨笨的方法，使用优化后的框架。">
       <created>1500790999785</created>
@@ -1396,7 +1403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500804276622</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1.修复login.jsp页面报错。因为引用了app.js文件，里面包含了分页的模块，该模块js没有加载进去。（以后还是每个项目都分开写）&#10;2.删除编辑新增成功后，每次重新请求hosts列表都是用方法$scope.getHosts();">
+      <created>1500823127617</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1500823127617</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1411,7 +1425,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20505000" />
+    <option name="totallyTimeSpent" value="21980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2572" height="1056" extended-state="0" />
@@ -1462,7 +1476,8 @@
     <MESSAGE value="1.优化整个框架，不用手动创建sqlsession，关闭sqlsession，提交sqlsession。利用spring的SqlSessionFactoryBean.getObject()获得SqlSessionFactory，自动管理SqlSession。 &#10;2.加入控制台打印mybatis日志。在mybatis-config.xml中配置日志信息。 &#10;3.优化登录接口，不使用以前笨笨的方法，使用优化后的框架。" />
     <MESSAGE value="前后端以及查询分页的实现：&#10;1.在mybatis-config.xml中加入分页插件，设置插件参数-------查询分页&#10;2.在springmvc  controller层加入返回pageinfo信息字段-------后端返回层&#10;3.创建了依赖pageHelper插件中Page类的PageInfo类，直接读取Page类中的信息----相关bean类&#10;4.加入前端分页插件，对插件进行了完善----依赖my-pagination.css my-pagination.js等文件，在app.js中进行配置，详细信息写到read.md" />
     <MESSAGE value="readme.md改动。" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme.md改动。" />
+    <MESSAGE value="1.修复login.jsp页面报错。因为引用了app.js文件，里面包含了分页的模块，该模块js没有加载进去。（以后还是每个项目都分开写）&#10;2.删除编辑新增成功后，每次重新请求hosts列表都是用方法$scope.getHosts();" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.修复login.jsp页面报错。因为引用了app.js文件，里面包含了分页的模块，该模块js没有加载进去。（以后还是每个项目都分开写）&#10;2.删除编辑新增成功后，每次重新请求hosts列表都是用方法$scope.getHosts();" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1737,14 +1752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="28" column="52" lean-forward="false" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring-mybatis.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1821,14 +1828,6 @@
             <element signature="e#2054#2055#0" expanded="true" />
             <element signature="e#2102#2103#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tpf/controller/HostsManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1913,7 +1912,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/hosts.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1926,10 +1933,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/app.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+        <state relative-caret-position="418">
+          <caret line="40" column="70" lean-forward="false" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="136" column="17" lean-forward="false" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tpf/controller/HostsManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
           <folding />
         </state>
       </provider>

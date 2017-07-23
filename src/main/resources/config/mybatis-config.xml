@@ -37,5 +37,7 @@
             <!-- always总是返回PageInfo类型,check检查返回类型是否为PageInfo,none返回Page -->
             <property name="returnPageInfo" value="check"/>
         </plugin>
+        <!-- 分页插件或其他插件，OrderBy 一定要在分页插件下面（主要是为了避免 count 也被增加排序） -->
+        <plugin interceptor="tk.mybatis.orderbyhelper.OrderByHelper"/>
     </plugins>
 </configuration>

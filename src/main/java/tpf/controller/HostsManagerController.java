@@ -6,6 +6,7 @@ import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import tk.mybatis.orderbyhelper.OrderByHelper;
 import tpf.pojo.HostPO;
 import tpf.pojo.PageInfo;
 import tpf.service.HostPOService;
@@ -51,6 +52,7 @@ public class HostsManagerController {
 
         //PageHelper.startPage(1,2);
         Page page=PageHelper.startPage(pageNum,pageSize,true);
+        OrderByHelper.orderBy("id desc");
         //查询前
         // System.out.println(page);
         List<HostPO> details = hostPOService.findAll();
