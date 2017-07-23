@@ -13,6 +13,14 @@
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="resources/js/app.js"></script>
+    <script src="resources/js/my-pagination.js"></script>
+    <link rel="stylesheet" href="resources/css/my-pagination.css">
+
+    <style>
+        a{
+            cursor:pointer
+        }
+    </style>
     <title>hosts page</title>
 
 </head>
@@ -47,6 +55,7 @@
                     </tr>
                 </tbody>
             </table>
+                <div ng-if="myPage.totalItems" my-pagination pg="myPage"></div>
         </div>
     </div>
 

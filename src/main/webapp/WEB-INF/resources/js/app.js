@@ -1,7 +1,7 @@
 /**
  * Created by zipon on 2017/3/8.
  */
-var app = angular.module("myapp",[]);
+var app = angular.module("myapp",['mePagination']);
 
 app.controller('login', function($scope,$http){
 
@@ -34,6 +34,19 @@ app.controller('login', function($scope,$http){
 
 //主机配置相关的ctrl
 app.controller('hostsctrl',function ($scope,$http) {
+
+
+    //分页插件封装的参数，my-pagination
+    $scope.myPage={
+        currentPage:1,//访问第几页数据，从1开始
+        totalItems:0,//数据库中总共有多少条数据
+        itemsPerPage: 30,//默认每页展示多少条数据，可更改
+        pagesLength: 15,
+        perPageOptions: [10, 20, 30, 40, 50,60]//可选择的每页展示多少条数据
+    };
+
+
+
     $scope.hosts= null;
     $scope.columnsToString={
         "id":"ID",
@@ -45,16 +58,24 @@ app.controller('hostsctrl',function ($scope,$http) {
         "updateTime":"更新时间"
     };
     $scope.columns = null;
-    $http({
+    $scope.getHosts=function(){$http({
         method  : 'GET',
-        url     : '/hosts',
+        url     : '/hosts?pagenum='+""+$scope.myPage.currentPage+"&pagesize="+$scope.myPage.itemsPerPage,
         data    : '',  // pass in data as strings
         //headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
     })
         .success(function(data){
             $scope.columns = data.columns;
             $scope.hosts = data.details;
-        });
+            $scope.myPage.totalItems=  parseInt(data.pageinfo.total);
+            console.log($scope.myPage.totalItems);
+        });};
+    //$scope.getHosts();
+    //监测当页码。总数据，每页展示数据个数变化时，重新加载数据
+    $scope.$watch(function (){
+        return $scope.myPage.itemsPerPage+' '+$scope.myPage.currentPage+' '+	$scope.myPage.totalItems;
+    },$scope.getHosts);
+
 
     //新增主机配置
     $scope.addHostInfo ={"createTime":"2017-07-19 17:34:21.0","description":"","hostIp":"","hostName":"","hostPort":"","id":5};

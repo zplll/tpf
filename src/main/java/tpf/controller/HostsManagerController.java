@@ -1,10 +1,13 @@
 package tpf.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import tpf.pojo.HostPO;
+import tpf.pojo.PageInfo;
 import tpf.service.HostPOService;
 import tpf.utils.DateUtil;
 import tpf.utils.ReflectUtil;
@@ -27,7 +30,10 @@ public class HostsManagerController {
      */
     @RequestMapping(value = "/hosts",produces = "text/plain;charset=UTF-8")
     @ResponseBody
-    public String getAllHosts(){
+    public String getAllHosts(
+            @RequestParam("pagenum") int pageNum,
+            @RequestParam("pagesize") int pageSize){
+        System.out.println("============================>"+pageNum+"==========>"+pageSize);
         JSONObject result = new JSONObject();
 
         List<String> columns =new ArrayList<String>();
@@ -43,10 +49,17 @@ public class HostsManagerController {
             e.printStackTrace();
         }
 
+        //PageHelper.startPage(1,2);
+        Page page=PageHelper.startPage(pageNum,pageSize,true);
+        //查询前
+        // System.out.println(page);
         List<HostPO> details = hostPOService.findAll();
+        //查询后
+        //System.out.println(page);
 
         result.put("columns",columns);
         result.put("details",details);
+        result.put("pageinfo",new PageInfo(page));
         return String.valueOf(result);
     }
 
