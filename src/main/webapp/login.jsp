@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
     <script src="resources/js/app.js"></script>
+    <script src="resources/js/my-pagination.js"></script>
 </head>
 <body ng-app = "myapp" style='background: url("resources/image/login.jpg") no-repeat center center fixed;background-size: cover'>
 <div class="container">

@@ -82,11 +82,6 @@ app.controller('hostsctrl',function ($scope,$http) {
 
 
     $scope.addHostFunc = function () {
-        //console.log($scope.addHostInfo);
-        //没有绑定这些数据，得人工置为null
-         //$scope.addHostInfo.id=parseInt($scope.addHostInfo.id);
-        // $scope.addHostInfo.createTime=null;
-        // $scope.addHostInfo.updateTime=null;
         $http({
                     method  : 'POST',
                     url     : '/addhost',
@@ -94,17 +89,7 @@ app.controller('hostsctrl',function ($scope,$http) {
                     headers : { 'Content-Type': 'application/json;charset=utf-8' }
                  }).success(function (data) {
                 if(data.code==1){
-                    //如果成功，重新加载hosts信息
-                    $http({
-                        method  : 'GET',
-                        url     : '/hosts',
-                        data    : '',  // pass in data as strings
-                        //headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
-                    })
-                        .success(function(data){
-                            $scope.columns = data.columns;
-                            $scope.hosts = data.details;
-                        })
+                    $scope.getHosts();
 
                 }else{
                     alert(data.message);
@@ -129,16 +114,7 @@ app.controller('hostsctrl',function ($scope,$http) {
         }).success(function (data) {
             if(data.code==1){
                 //如果成功，重新加载hosts信息
-                $http({
-                    method  : 'GET',
-                    url     : '/hosts',
-                    data    : '',  // pass in data as strings
-                    //headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
-                })
-                    .success(function(data){
-                        $scope.columns = data.columns;
-                        $scope.hosts = data.details;
-                    })
+                $scope.getHosts();
 
             }else{
                 alert(data.message);
@@ -163,7 +139,6 @@ app.controller('hostsctrl',function ($scope,$http) {
         }).success(function (data) {
              $scope.editHostInfo=data.details;
         })
-        //$scope.editHostInfo=$event.target.getAttribute("value");
     }
     $scope.editHostFunc=function () {
         $http({
@@ -175,16 +150,7 @@ app.controller('hostsctrl',function ($scope,$http) {
         }).success(function (data) {
             if(data.code==1){
                 //如果成功，重新加载hosts信息
-                $http({
-                    method  : 'GET',
-                    url     : '/hosts',
-                    data    : '',  // pass in data as strings
-                    //headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
-                })
-                    .success(function(data){
-                        $scope.columns = data.columns;
-                        $scope.hosts = data.details;
-                    })
+                $scope.getHosts();
 
             }else{
                 alert(data.message);
