@@ -5,7 +5,7 @@ testplatform测试平台
 
 # 前端分页插件的使用：
 ## mePagination这个依赖一定要加
-## my-pagination.js对原来的插件有做部分修改完善
+## my-pagination.js对原来的插件有做部分修改完善,还依赖my-pagination.css文件
 1.
 ```javascript
     angular.module('app',['mePagination'])
