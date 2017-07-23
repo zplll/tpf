@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26533706-d0bd-4bb2-878e-c4818b3024d3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tpf/pojo/PageInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/my-pagination.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/my-pagination.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/tpf/controller/HostsManagerControllerTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tpf/controller/HostsManagerController.java" afterPath="$PROJECT_DIR$/src/main/java/tpf/controller/HostsManagerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/spring-mybatis.xml" afterPath="$PROJECT_DIR$/src/main/resources/config/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/app.js" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/hosts.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/hosts.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/houji0.1-1.0-SNAPSHOT/WEB-INF/resources/js/app.js" afterPath="$PROJECT_DIR$/target/houji0.1-1.0-SNAPSHOT/WEB-INF/resources/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/database.properties" afterPath="$PROJECT_DIR$/src/main/resources/database.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,30 +17,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="spring-mybatis.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring-mybatis.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="37" column="118" lean-forward="false" selection-start-line="37" selection-start-column="118" selection-end-line="37" selection-end-column="118" />
-              <folding>
-                <element signature="e#1158#1169#0" expanded="true" />
-                <element signature="e#1208#1218#0" expanded="true" />
-                <element signature="e#1262#1271#0" expanded="true" />
-                <element signature="e#1315#1328#0" expanded="true" />
-                <element signature="e#1400#1416#0" expanded="true" />
-                <element signature="e#1495#1509#0" expanded="true" />
-                <element signature="e#1586#1598#0" expanded="true" />
-                <element signature="e#1675#1687#0" expanded="true" />
-                <element signature="e#1767#1779#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HostsManagerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tpf/controller/HostsManagerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
+            <state relative-caret-position="893">
               <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -57,21 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tpf/pojo/BaseResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PageInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tpf/pojo/PageInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="75" column="27" lean-forward="true" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+            <state relative-caret-position="988">
+              <caret line="75" column="27" lean-forward="false" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
               <folding>
                 <element signature="e#815#816#0" expanded="true" />
                 <element signature="e#843#844#0" expanded="true" />
@@ -117,7 +79,7 @@
       <file leaf-file-name="Page.class" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.0.0/pagehelper-5.0.0.jar!/com/github/pagehelper/Page.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="2736">
               <caret line="172" column="26" lean-forward="false" selection-start-line="172" selection-start-column="21" selection-end-line="172" selection-end-column="26" />
               <folding />
             </state>
@@ -134,11 +96,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="912">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="152">
+                <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+                <folding>
+                  <marker date="1500803123907" expanded="true" signature="212:713" ph="[...]" />
+                  <marker date="1500803123907" expanded="true" signature="238:705" ph="{...}" />
+                  <marker date="1500803123907" expanded="true" signature="260:508" ph="{...}" />
+                  <marker date="1500803123907" expanded="true" signature="737:1216" ph="{...}" />
+                  <marker date="1500803123907" expanded="true" signature="872:1210" ph="{...}" />
+                  <marker date="1500803123907" expanded="true" signature="994:1199" ph="{...}" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/database.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,8 +149,8 @@
       <file leaf-file-name="my-pagination.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/my-pagination.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+            <state relative-caret-position="627">
+              <caret line="33" column="27" lean-forward="false" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
               <folding>
                 <marker date="1500801745382" expanded="true" signature="617:1866" ph="..." />
                 <marker date="1500801745382" expanded="true" signature="665:1211" ph="..." />
@@ -179,16 +181,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mybatis-config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="28" column="52" lean-forward="false" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -234,6 +226,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/hosts.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/my-pagination.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/app.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/database.properties" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -271,6 +265,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -845,16 +841,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -1401,7 +1396,8 @@
       <workItem from="1500727522466" duration="722000" />
       <workItem from="1500731735459" duration="305000" />
       <workItem from="1500732043421" duration="3204000" />
-      <workItem from="1500790104212" duration="11552000" />
+      <workItem from="1500790104212" duration="12987000" />
+      <workItem from="1500803589156" duration="185000" />
     </task>
     <task id="LOCAL-00001" summary="1.优化整个框架，不用手动创建sqlsession，关闭sqlsession，提交sqlsession。利用spring的SqlSessionFactoryBean.getObject()获得SqlSessionFactory，自动管理SqlSession。 &#10;2.加入控制台打印mybatis日志。在mybatis-config.xml中配置日志信息。 &#10;3.优化登录接口，不使用以前笨笨的方法，使用优化后的框架。">
       <created>1500790999785</created>
@@ -1410,7 +1406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500790999785</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="前后端以及查询分页的实现：&#10;1.在mybatis-config.xml中加入分页插件，设置插件参数-------查询分页&#10;2.在springmvc  controller层加入返回pageinfo信息字段-------后端返回层&#10;3.创建了依赖pageHelper插件中Page类的PageInfo类，直接读取Page类中的信息----相关bean类&#10;4.加入前端分页插件，对插件进行了完善----依赖my-pagination.css my-pagination.js等文件，在app.js中进行配置，详细信息写到read.md">
+      <created>1500803101736</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1500803101736</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1425,7 +1428,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15868000" />
+    <option name="totallyTimeSpent" value="17488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2572" height="1056" extended-state="0" />
@@ -1445,25 +1448,25 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38177875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38177875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14808917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14928344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1474,7 +1477,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1.优化整个框架，不用手动创建sqlsession，关闭sqlsession，提交sqlsession。利用spring的SqlSessionFactoryBean.getObject()获得SqlSessionFactory，自动管理SqlSession。 &#10;2.加入控制台打印mybatis日志。在mybatis-config.xml中配置日志信息。 &#10;3.优化登录接口，不使用以前笨笨的方法，使用优化后的框架。" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.优化整个框架，不用手动创建sqlsession，关闭sqlsession，提交sqlsession。利用spring的SqlSessionFactoryBean.getObject()获得SqlSessionFactory，自动管理SqlSession。 &#10;2.加入控制台打印mybatis日志。在mybatis-config.xml中配置日志信息。 &#10;3.优化登录接口，不使用以前笨笨的方法，使用优化后的框架。" />
+    <MESSAGE value="前后端以及查询分页的实现：&#10;1.在mybatis-config.xml中加入分页插件，设置插件参数-------查询分页&#10;2.在springmvc  controller层加入返回pageinfo信息字段-------后端返回层&#10;3.创建了依赖pageHelper插件中Page类的PageInfo类，直接读取Page类中的信息----相关bean类&#10;4.加入前端分页插件，对插件进行了完善----依赖my-pagination.css my-pagination.js等文件，在app.js中进行配置，详细信息写到read.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="前后端以及查询分页的实现：&#10;1.在mybatis-config.xml中加入分页插件，设置插件参数-------查询分页&#10;2.在springmvc  controller层加入返回pageinfo信息字段-------后端返回层&#10;3.创建了依赖pageHelper插件中Page类的PageInfo类，直接读取Page类中的信息----相关bean类&#10;4.加入前端分页插件，对插件进行了完善----依赖my-pagination.css my-pagination.js等文件，在app.js中进行配置，详细信息写到read.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1485,15 +1489,140 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/tpf/service/UserInfoOperator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tpf/controller/HostsManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="893">
+          <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tpf/pojo/BaseResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis/mybatis-config.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tpf/pojo/PageInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="75" column="27" lean-forward="true" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+          <folding>
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1242#1243#0" expanded="true" />
+            <element signature="e#1273#1274#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1358#1359#0" expanded="true" />
+            <element signature="e#1388#1389#0" expanded="true" />
+            <element signature="e#1417#1418#0" expanded="true" />
+            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
+            <element signature="e#1524#1525#0" expanded="true" />
+            <element signature="e#1552#1553#0" expanded="true" />
+            <element signature="e#1592#1593#0" expanded="true" />
+            <element signature="e#1626#1627#0" expanded="true" />
+            <element signature="e#1655#1656#0" expanded="true" />
+            <element signature="e#1683#1684#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1756#1757#0" expanded="true" />
+            <element signature="e#1793#1794#0" expanded="true" />
+            <element signature="e#1826#1827#0" expanded="true" />
+            <element signature="e#1879#1880#0" expanded="true" />
+            <element signature="e#1923#1924#0" expanded="true" />
+            <element signature="e#1962#1963#0" expanded="true" />
+            <element signature="e#1997#1998#0" expanded="true" />
+            <element signature="e#2054#2055#0" expanded="true" />
+            <element signature="e#2102#2103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.0.0/pagehelper-5.0.0.jar!/com/github/pagehelper/Page.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2736">
+          <caret line="172" column="26" lean-forward="false" selection-start-line="172" selection-start-column="21" selection-end-line="172" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/hosts.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="152">
+            <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+            <folding>
+              <marker date="1500803123907" expanded="true" signature="212:713" ph="[...]" />
+              <marker date="1500803123907" expanded="true" signature="238:705" ph="{...}" />
+              <marker date="1500803123907" expanded="true" signature="260:508" ph="{...}" />
+              <marker date="1500803123907" expanded="true" signature="737:1216" ph="{...}" />
+              <marker date="1500803123907" expanded="true" signature="872:1210" ph="{...}" />
+              <marker date="1500803123907" expanded="true" signature="994:1199" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/my-pagination.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding>
+            <marker date="1500801745382" expanded="true" signature="617:1866" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="665:1211" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="790:796" ph="&amp;##171;" />
+            <marker date="1500801745382" expanded="true" signature="1162:1168" ph="&amp;##187;" />
+            <marker date="1500801745382" expanded="true" signature="1262:1394" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1262:1395" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1262:1399" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1262:1400" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1262:1401" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1262:1409" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1262:1413" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1262:1414" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1262:1427" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1262:1428" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1262:1429" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1262:1432" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1262:1441" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1262:1742" ph="..." />
+            <marker date="1500801745382" expanded="true" signature="1807:1819" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/css/my-pagination.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1501,6 +1630,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/database.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tpf/service/UserInfoOperator.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis/mybatis-config.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring-mybatis.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1519,14 +1658,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis/mybatis-config.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/tpf/service/DatabasePOService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -1535,35 +1667,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tpf/service/UserInfoOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tpf/service/BaseOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tpf/service/UserInfoOperator.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/tpf/service/BaseOperator.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/createtableSql/createtablesql.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
           <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/database.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1624,7 +1733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1682,7 +1790,7 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.0.0/pagehelper-5.0.0.jar!/com/github/pagehelper/Page.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="2736">
           <caret line="172" column="26" lean-forward="false" selection-start-line="172" selection-start-column="21" selection-end-line="172" selection-end-column="26" />
           <folding />
         </state>
@@ -1690,8 +1798,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tpf/pojo/PageInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="75" column="27" lean-forward="true" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+        <state relative-caret-position="988">
+          <caret line="75" column="27" lean-forward="false" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
           <folding>
             <element signature="e#815#816#0" expanded="true" />
             <element signature="e#843#844#0" expanded="true" />
@@ -1735,7 +1843,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tpf/controller/HostsManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
+        <state relative-caret-position="893">
           <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1761,8 +1869,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/my-pagination.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+        <state relative-caret-position="627">
+          <caret line="33" column="27" lean-forward="false" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
           <folding>
             <marker date="1500801745382" expanded="true" signature="617:1866" ph="..." />
             <marker date="1500801745382" expanded="true" signature="665:1211" ph="..." />
@@ -1789,8 +1897,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/resources/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="912">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="152">
+            <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+            <folding>
+              <marker date="1500803123907" expanded="true" signature="212:713" ph="[...]" />
+              <marker date="1500803123907" expanded="true" signature="238:705" ph="{...}" />
+              <marker date="1500803123907" expanded="true" signature="260:508" ph="{...}" />
+              <marker date="1500803123907" expanded="true" signature="737:1216" ph="{...}" />
+              <marker date="1500803123907" expanded="true" signature="872:1210" ph="{...}" />
+              <marker date="1500803123907" expanded="true" signature="994:1199" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/database.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
           <folding />
         </state>
       </provider>
