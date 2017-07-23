@@ -42,6 +42,8 @@ testplatform测试平台
 	}])
 ```
 在页面中：
+```
 <div ng-if="myPage.totalItems" my-pagination pg="myPage"></div>
+```
 
 pg属性不能改，双向数据绑定的
