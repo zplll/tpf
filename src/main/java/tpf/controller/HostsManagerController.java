@@ -4,8 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import tpf.dao.impl.HostPOMapperImpl;
 import tpf.pojo.HostPO;
+import tpf.service.HostPOService;
 import tpf.utils.DateUtil;
 import tpf.utils.ReflectUtil;
 
@@ -19,7 +19,7 @@ import java.util.List;
 @Controller
 public class HostsManagerController {
     @Autowired
-    private HostPOMapperImpl hostPOMapper = new HostPOMapperImpl();
+    private HostPOService hostPOService;
 
     /**
      * 查询所有主机配置信息
@@ -43,7 +43,7 @@ public class HostsManagerController {
             e.printStackTrace();
         }
 
-        List<HostPO> details = hostPOMapper.findAll();
+        List<HostPO> details = hostPOService.findAll();
 
         result.put("columns",columns);
         result.put("details",details);
@@ -63,7 +63,7 @@ public class HostsManagerController {
 
         JSONObject result = new JSONObject();
 
-        int resultInt =hostPOMapper.insert(hostpo);
+        int resultInt =hostPOService.insert(hostpo);
         if (resultInt==1){
             result.put("code",1);
             result.put("message","success");
@@ -82,7 +82,7 @@ public class HostsManagerController {
     public String addHost(@PathVariable Integer hostId){
         JSONObject result = new JSONObject();
 
-        int resultInt =hostPOMapper.deleteByPrimaryKey(hostId);
+        int resultInt =hostPOService.deleteByPrimaryKey(hostId);
         if (resultInt==1){
             result.put("code",1);
             result.put("message","delete success");
@@ -102,7 +102,7 @@ public class HostsManagerController {
         System.out.println(hostPo.toString());
         JSONObject result = new JSONObject();
 
-        int resultInt =hostPOMapper.updateByPrimaryKey(hostPo);
+        int resultInt =hostPOService.updateByPrimaryKey(hostPo);
         if (resultInt==1){
             result.put("code",1);
             result.put("message","update success");
@@ -120,7 +120,7 @@ public class HostsManagerController {
     public String selectHostById(@PathVariable Integer hostId){
         JSONObject result = new JSONObject();
 
-        HostPO hostPO =hostPOMapper.selectByPrimaryKey(hostId);
+        HostPO hostPO =hostPOService.selectByPrimaryKey(hostId);
 
             result.put("columns", ReflectUtil.getPropFromClass("tpf.pojo.HostPO"));
             result.put("details",hostPO);

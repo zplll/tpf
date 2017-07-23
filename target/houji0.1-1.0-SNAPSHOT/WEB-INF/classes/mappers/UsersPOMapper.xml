@@ -114,4 +114,16 @@
       update_time = #{updateTime,jdbcType=VARCHAR}
     where user_id = #{userId,jdbcType=INTEGER}
   </update>
+  <select id="selectUserByName" parameterType="String" resultMap="BaseResultMap">
+    <!--CDATA指原文代入-->
+    <![CDATA[
+            select * from users where name = #{name}
+        ]]>
+  </select>
+  <select id="selectUserByEmail" parameterType="String" resultMap="BaseResultMap">
+    <!--CDATA指原文代入-->
+    <![CDATA[
+            select * from users where email_address = #{email}
+        ]]>
+  </select>
 </mapper>

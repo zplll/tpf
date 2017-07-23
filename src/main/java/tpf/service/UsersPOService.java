@@ -1,9 +1,12 @@
-package tpf.dao;
+package tpf.service;
 
-import org.springframework.stereotype.Repository;
+import com.alibaba.fastjson.JSONObject;
 import tpf.pojo.UsersPO;
-@Repository
-public interface UsersPOMapper {
+
+import javax.annotation.Resource;
+
+@Resource
+public interface UsersPOService {
     int deleteByPrimaryKey(Integer userId);
 
     int insert(UsersPO record);
@@ -20,5 +23,5 @@ public interface UsersPOMapper {
 
     UsersPO selectUserByEmail(String email);
 
-
+    JSONObject loginCheck(String nameOrEmail, String password);
 }

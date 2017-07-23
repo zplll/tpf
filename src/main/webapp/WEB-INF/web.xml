@@ -10,13 +10,13 @@
         <location>/error404.jsp</location>
     </error-page>
     <!-- 500错误拦截 -->
-    <error-page>
-        <error-code>500</error-code>
-        <location>/error500.jsp</location>
-    </error-page>
+    <!--<error-page>-->
+        <!--<error-code>500</error-code>-->
+        <!--<location>/error500.jsp</location>-->
+    <!--</error-page>-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/applicationContext.xml,classpath:config/spring-mybatis.xml</param-value>
+        <param-value>classpath:config/spring-mybatis.xml</param-value>
     </context-param>
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

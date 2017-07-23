@@ -1,11 +1,12 @@
-package tpf.dao;
+package tpf.service;
 
-import org.springframework.stereotype.Repository;
 import tpf.pojo.HostPO;
 
+import javax.annotation.Resource;
 import java.util.List;
-@Repository
-public interface HostPOMapper {
+
+@Resource
+public interface HostPOService {
     int deleteByPrimaryKey(Integer id);
 
     int insert(HostPO record);

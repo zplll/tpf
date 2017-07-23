@@ -1,10 +1,11 @@
 package tpf.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import tpf.service.UserInfoOperator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import tpf.service.UsersPOService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,6 +17,8 @@ import java.io.UnsupportedEncodingException;
  */
 @Controller
 public class loginController {
+    @Autowired
+    private UsersPOService usersPOService;
 
     @RequestMapping(value = "/login",produces="text/plain;charset=UTF-8")
     @ResponseBody
@@ -29,7 +32,7 @@ public class loginController {
         String username = request.getParameter("username");
         String passwd = request.getParameter("password");
 
-        JSONObject json = UserInfoOperator.getInstance().loginCheck(username,passwd);
+        JSONObject json = usersPOService.loginCheck(username,passwd);
         if(json.getString("code").equals("0")){
 
             HttpSession session = request.getSession();

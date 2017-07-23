@@ -124,6 +124,53 @@ app.controller('hostsctrl',function ($scope,$http) {
             }
         })
     }
+
+
+    //即将把修改后的传递的参数
+    $scope.editHostInfo = null;
+    $scope.editId=null;
+    //修改按钮触发的事件
+    $scope.editBtnFunc = function ($event){
+        //根据id重新请求,按钮的value要绑定id
+        $scope.editId=$event.target.getAttribute("value");
+        $http({
+            method : "GET",
+            url : "/hosts/"+$scope.editId,
+            data    : "",  // pass in data as strings
+            //headers : { 'Content-Type': 'application/json;charset=utf-8' }
+
+        }).success(function (data) {
+             $scope.editHostInfo=data.details;
+        })
+        //$scope.editHostInfo=$event.target.getAttribute("value");
+    }
+    $scope.editHostFunc=function () {
+        $http({
+            method : "POST",
+            url : "/updatehost",
+            data    : $scope.editHostInfo,  // pass in data as strings
+            headers : { 'Content-Type': 'application/json;charset=utf-8' }
+
+        }).success(function (data) {
+            if(data.code==1){
+                //如果成功，重新加载hosts信息
+                $http({
+                    method  : 'GET',
+                    url     : '/hosts',
+                    data    : '',  // pass in data as strings
+                    //headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+                })
+                    .success(function(data){
+                        $scope.columns = data.columns;
+                        $scope.hosts = data.details;
+                    })
+
+            }else{
+                alert(data.message);
+            }
+        })
+    }
+    //确认修改提交的事件
     // $scope.taskDetail = "1234";
     // $scope.editTask=function($event){
     //     $scope.taskDetail = JSON.parse($event.target.getAttribute("value"));
